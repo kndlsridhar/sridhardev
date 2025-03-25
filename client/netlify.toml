@@ -1,4 +1,23 @@
-[[redirects]]
-  from = "/*"
-  to = "/index.html"
-  status = 200
+plugins = []
+headers = []
+redirects = []
+
+[functions]
+
+  [functions."*"]
+
+[build]
+
+  [build.environment]
+
+  [build.processing]
+
+    [build.processing.css]
+
+    [build.processing.html]
+
+    [build.processing.images]
+
+    [build.processing.js]
+
+  [build.services]
