@@ -37,6 +37,8 @@ export const Projects = () => {
         <div className='container'>
             <div className='row'>
                 <div className='col-xl-12'>
+
+                    <h1>Test</h1>
                 <Link to="/projects/create" className="btn btn-dark">create</Link>
                     <div class="table-responsive">
                         <table class="table table-striped table-bordered">
