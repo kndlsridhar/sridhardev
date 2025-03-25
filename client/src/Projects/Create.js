@@ -15,7 +15,7 @@
 //     const navigate = useNavigate();
 //     const handleSubmit = (e) =>{
 //         e.preventDefault();
-//         axios.post('http://localhost:3001/createProject',{title,desc,img,category,type,url})
+//         axios.post('https://sridhardev.vercel.app/createProject',{title,desc,img,category,type,url})
 //         .then(result => {
 //             console.log(result);
 //             alert('Succefull Created Project !')

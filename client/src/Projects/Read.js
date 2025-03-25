@@ -6,13 +6,13 @@ export const Read = () => {
     const [data, setProjects] = useState([]);
     const { id } = useParams();
     // useEffect(() => {
-    //     axios.get('http://localhost:3001/Projects/' + id)
+    //     axios.get('https://sridhardev.vercel.app/Projects/' + id)
     //         .then(res => setData(res.data))
     //         .catch(err => console.log(err))
     // }, [id]);
 
     useEffect(() => {
-        axios.get('http://localhost:3001/getProjects/' + id)
+        axios.get('https://sridhardev.vercel.app/getProjects/' + id)
         .then(res => setProjects(res.data))
         .catch(err => console.log(err))
     }, [id]);
@@ -35,7 +35,7 @@ export const Read = () => {
                                 </div>
                                 <div class="row justify-content-center align-items-center g-2">
                                     <div class="col-xl-6">Image</div>
-                                    <div class="col-xl-6"><img src={`http://localhost:3001/${data.img}`} className='img-fluid' width="50px" height="50px" alt='img' /></div>
+                                    <div class="col-xl-6"><img src={`https://sridhardev.vercel.app/${data.img}`} className='img-fluid' width="50px" height="50px" alt='img' /></div>
                                 </div>
                                 <div class="row justify-content-center align-items-center g-2">
                                     <div class="col-xl-6">Category</div>

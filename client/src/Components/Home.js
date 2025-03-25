@@ -11,7 +11,7 @@ const Home = () =>{
 
 
     useEffect(()=>{
-        axios.get('http://localhost:3001/Projects/')
+        axios.get('https://sridhardev.vercel.app/Projects/')
         .then(response => setProjects(response.data))
         .catch(error => console.log('Not Loading'+ error))
     },[])
@@ -181,7 +181,7 @@ const Home = () =>{
                                 <div className="card-body">
                                     <div className="row">
                                         <div className="col-xl-5 col-5">
-                                            <img src={`http://localhost:3001/${p.img}`} className="img-fluid" alt="name"/>
+                                            <img src={`https://sridhardev.vercel.app/${p.img}`} className="img-fluid" alt="name"/>
                                         </div>
                                         <div className="col-xl-7 col-7">
                                             <h3>{p.title} <span><FontAwesomeIcon icon={faLink}/> {p.url}</span></h3>
