@@ -1,9 +1,5 @@
-  {
-  "redirects": [
-    {
-      "source": "http://sridhardev-server.vercel.app",
-      "destination": "https://sridhardev-server.vercel.app",
-      "permanent": true
-    }
+{
+  "rewrites": [
+    { "source": "/(.*)", "destination": "/" }
   ]
 }
