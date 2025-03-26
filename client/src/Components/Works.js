@@ -12,14 +12,14 @@ const Works = () => {
 
     useEffect(() => {
         setLoading(true);
-        axios.get('https://sridhardev.vercel.app/Projects/')
+        axios.get('http://localhost:3001/Projects/')
             .then(res => {
                 setProject(res.data);
                 setLoading(false);
             })
             .catch(err => {
                 console.log(err);
-                setLoading(false);
+                setLoading(true);
             });
     }, []);
     return (
@@ -61,13 +61,13 @@ const Works = () => {
 
                             project.map((p, i) => (
 
-                                <div className="col-xl-4 col-12">
-                                    <div className="card">
+                                <div className="col-xl-4 col-12 d-flex align-items-stretch">
+                                    <div className="card w-100">
                                         <div className="card-body">
                                             <div className="row">
                                                 <div className="col-xl-12 col-12">
                                                     <div className='image'>
-                                                        <img src={`https://sridhardev.vercel.app/${p.img}`} className="img-fluid" alt="name" />
+                                                        <img src={`http://localhost:3001/${p.img}`} className="img-fluid" alt="name"/>
                                                     </div>
                                                 </div>
                                                 <div className="col-xl-12 col-12">

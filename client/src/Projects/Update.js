@@ -14,7 +14,7 @@ export const Update = () => {
     const navigate = useNavigate();
 
     useEffect(() => {
-        axios.get('https://sridhardev.vercel.app/getProjects/' + id)
+        axios.get('http://localhost:3001/getProjects/' + id)
             .then(res => {
                 console.log(res.data);
                 setTitle(res.data.title);
@@ -37,7 +37,7 @@ export const Update = () => {
         formData.append('type', type);
         formData.append('url', url);
 
-        axios.put('https://sridhardev.vercel.app/updateProjects/' + id, formData, {
+        axios.put('http://localhost:3001/updateProjects/' + id, formData, {
             headers: {
                 'Content-Type': 'multipart/form-data'
             }
@@ -89,7 +89,7 @@ export const Update = () => {
                                                 <div className="col-md-12">
                                                     <label className="form-label">Project Image</label>
                                                     <input type="file" className="form-control" name="img" onChange={e => setImg(e.target.files[0])} />
-                                                    {img && <img src={`https://sridhardev.vercel.app/${img}`} alt='img' className='img-fluid w-25' />}
+                                                    {img && <img src={`http://localhost:3001/${img}`} alt='img' className='img-fluid w-25' />}
                                                 </div>
 
                                                 <div className="col-md-12">

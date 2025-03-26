@@ -11,7 +11,7 @@ export const CreateUser = () => {
 
     const Submit = (e) =>{
         e.preventDefault();
-        axios.post('https://sridhardev.vercel.app/createUser',{name,email,age})
+        axios.post('http://localhost:3001/createUser',{name,email,age})
         .then(result => {
             console.log(result);
             alert('Succefull Created User !')
@@ -21,7 +21,7 @@ export const CreateUser = () => {
     }
 
     useEffect(()=>{
-        axios.get('https://sridhardev.vercel.app/Users/')
+        axios.get('http://localhost:3001/Users/')
         .then(result => setUsers(result.data))
         .catch(error => console.log(error))
     },[])

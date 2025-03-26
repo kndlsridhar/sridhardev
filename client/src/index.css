@@ -210,7 +210,7 @@ footer {
 }
 
 .side-right nav ul li:hover {
-  
+
   border: 1px solid #545454;
   background: #141415;
   transition-delay: 0.2s;
@@ -287,14 +287,14 @@ footer {
 }
 
 @keyframes cat-top {
-  0% { 
+  0% {
     transform: translate(0, 0);
   }
-  35% { 
+  35% {
     transform: translate(0, -12px);
     animation-timing-function: cubic-bezier(0.25, 1, 0.5, 1);
   }
-  100% { 
+  100% {
     transform: translate(0, 0);
     animation-timing-function: cubic-bezier(0.25, 1, 0.5, 1);
   }
@@ -562,10 +562,18 @@ text-decoration: none;}
   background: #0a0a0b;
   border: 1px solid #141415;
   border-radius: 0.75rem;
+  transition: 0.2s;
+}
+
+.showcase .card:hover{
+  transform: scale(1.05);
 }
 
 .showcase img {
   border-radius: 0.75rem;
+  height: 200px;
+  max-height: 200px;
+  width: 100%;
 }
 
 .showcase h3 {
@@ -573,6 +581,8 @@ text-decoration: none;}
   align-items: center;
   justify-content: space-between;
   color: #cccccc;
+  font-size: 1.1rem;
+  margin-top: 0.5rem;
 }
 
 .showcase h3 span {
@@ -591,6 +601,9 @@ text-decoration: none;}
 }
 .showcase .details h5{
   color: #999999;
+  font-size: 0.8rem;
+  margin: 0;
+  line-height: 1.2;
 }
 
 .showcase p {
