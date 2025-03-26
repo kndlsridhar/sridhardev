@@ -3,7 +3,6 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faArrowRight, faCircle, faLink, faSuitcase } from '@fortawesome/free-solid-svg-icons';
 import { useEffect, useState } from 'react';
 import axios from 'axios';
-import { baseURL } from './Urls';
 
 
 const Works = () => {
@@ -13,7 +12,7 @@ const Works = () => {
 
     useEffect(() => {
         setLoading(true);
-        axios.get(`${baseURL}/Projects/`)
+        axios.get('http://localhost:3001/Projects/')
             .then(res => {
                 setProject(res.data);
                 setLoading(false);
@@ -68,7 +67,7 @@ const Works = () => {
                                             <div className="row">
                                                 <div className="col-xl-12 col-12">
                                                     <div className='image'>
-                                                        <img src={`${baseURL}/${p.img}`} className="img-fluid" alt="name"/>
+                                                        <img src={`http://localhost:3001/${p.img}`} className="img-fluid" alt="name"/>
                                                     </div>
                                                 </div>
                                                 <div className="col-xl-12 col-12">
