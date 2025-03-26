@@ -8,11 +8,15 @@ const path = require('path');
 const connectDb = require('./db.js')
 const UserModel = require('./models/Users')
 const ProjectModel = require('./models/Projects')
-
+const corsConfig={
+  origin:"*",
+  credential:true,
+  methods:["GET","POST","PUT","DELETE"]
+}
 
 const app = express()
-
-app.use(cors())
+app.options("",cors(corsConfig))
+app.use(cors(corsConfig))
 app.use(express.json())
 app.use('/uploads', express.static('uploads'));
 
