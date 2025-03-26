@@ -13,7 +13,7 @@ const Works = () => {
 
     useEffect(() => {
         setLoading(true);
-        axios.get(`${baseURL}Projects/`)
+        axios.get('http://localhost:3001/Projects/')
             .then(res => {
                 setProject(res.data);
                 setLoading(false);
