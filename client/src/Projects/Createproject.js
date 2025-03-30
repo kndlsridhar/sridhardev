@@ -41,7 +41,7 @@ export const CreateProject = () => {
       form.append('url', formData.url);
 
       try {
-        const response = await axios.post('http://localhost:3001/createProject', form, {
+        const response = await axios.post('https://portfolio-zaj5.onrender.com/createProject', form, {
           headers: {
             'Content-Type': 'multipart/form-data',
           },

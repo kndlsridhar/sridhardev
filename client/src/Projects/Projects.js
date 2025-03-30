@@ -7,7 +7,7 @@ export const Projects = () => {
     const navigate = useNavigate();
 
     useEffect(() => {
-        axios.get('http://localhost:3001/Projects/')
+        axios.get('https://portfolio-zaj5.onrender.com/Projects/')
         .then(res => setProjects(res.data))
         .catch(err => console.log(err))
     }, []);
@@ -15,7 +15,7 @@ export const Projects = () => {
     const handleDelete=(id)=>{
         const confirm = window.confirm('Are you sure want to delete?')
         if (confirm) {
-            axios.delete('http://localhost:3001/deleteProjects/' + id)
+            axios.delete('https://portfolio-zaj5.onrender.com/deleteProjects/' + id)
                 .then(res => {
                     navigate('/projects/list/');
                     window.location.reload();
@@ -60,7 +60,7 @@ export const Projects = () => {
                                         <tr class="" key={i}>
                                             <td>{i + 1}</td>
                                             <td nowrap>{d.title}</td>
-                                            <td><img src={`http://localhost:3001/${d.img}`} alt='img' className='w-25' /></td>
+                                            <td><img src={`https://portfolio-zaj5.onrender.com/${d.img}`} alt='img' className='w-25' /></td>
                                             {/* <td>{d.desc}</td> */}
                                             <td>{d.category}</td>
                                             <td>{d.type}</td>

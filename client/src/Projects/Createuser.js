@@ -11,7 +11,7 @@ export const CreateUser = () => {
 
     const Submit = (e) =>{
         e.preventDefault();
-        axios.post('http://localhost:3001/createUser',{name,email,age})
+        axios.post('https://portfolio-zaj5.onrender.com/createUser',{name,email,age})
         .then(result => {
             console.log(result);
             alert('Succefull Created User !')
@@ -21,7 +21,7 @@ export const CreateUser = () => {
     }
 
     useEffect(()=>{
-        axios.get('http://localhost:3001/Users/')
+        axios.get('https://portfolio-zaj5.onrender.com/Users/')
         .then(result => setUsers(result.data))
         .catch(error => console.log(error))
     },[])
